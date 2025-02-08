@@ -44,13 +44,12 @@ header {
     align-items: center;
     padding: 0 20px;
 }
-.wrapeer-2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
 
+.nav-link{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
 .logo {
     display: flex;
     align-items: center;
@@ -119,7 +118,10 @@ nav ul li a:hover::after {
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-
+.nav-link{
+    display: flex;
+    flex-direction: row;
+}
 nav ul li a:hover {
     background: var(--gradient-hover);
     background-clip: text;
@@ -152,12 +154,12 @@ nav ul li a:hover::after {
 
 @media (max-width: 768px) {
     .slider img {
-        height: 300px;
+        height: auto;
     }
 }
 @media (max-width: 480px) {
     .slider img {
-        height: 200px;
+        height: auto;
     }
 }
 @media (max-width: 1024px) {
@@ -182,6 +184,9 @@ nav ul li a:hover::after {
 }
 
 @media (max-width: 768px) {
+    header{
+        height: 75px;
+    }
     .container {
         flex-direction: row;
         justify-content: space-between;
@@ -197,7 +202,16 @@ nav ul li a:hover::after {
         flex-direction: column;
         align-items: center;
         padding: 10px 0;
+        text-align: end;
+        z-index: 9999;
+    }
+    .nav-link{
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
     }
 
     nav ul {
@@ -250,4 +264,59 @@ nav ul li a:hover::after {
 .slick-dots li.slick-active button:before {
     color: white !important; 
     opacity: 1; 
+}
+@media (min-width: 1024px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .nav-desktop {
+        display: block;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .nav-desktop {
+        display: block;
+    }
+}
+.toggle-menu {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.toggle-menu .menu-icon {
+    font-size: 30px;
+    color: var(--white);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.close-button span {
+    font-size: 24px;
+    color: var(--white);
+}
+
+@media (max-width: 1023px) {
+    .toggle-menu {
+        display: block;
+    }
 }

@@ -116,3 +116,11 @@ body.light-mode .slick-dots li button:before {
 body.light-mode .slick-dots li.slick-active button:before {
     color: black !important;
 }
+body.light-mode nav {
+    
+    background-color: var(--light-gray);
+    
+}
+body.light-mode .menu-icon{
+    color: var(--black);
+}
