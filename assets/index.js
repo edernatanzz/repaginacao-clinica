@@ -42,10 +42,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 $(document).ready(function () {
     $(".toggle-menu").click(function () {
         $("nav").slideToggle();
+        
+        const menuIcon = $(this).find(".menu-icon");
+        if (menuIcon.text() === "☰") {
+            menuIcon.text("✕");
+            menuIcon.addClass("close");
+        } else {
+            menuIcon.text("☰");
+            menuIcon.removeClass("close");
+        }
     });
 });
-
