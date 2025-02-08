@@ -1,0 +1,135 @@
+:root {
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+    --white: #FFFFFF;
+    --light-gray: #E5E5E5;
+    --dark-blue: #415572;
+    --medium-gray: #999999;
+    --dark-gray: #141619;
+    --black: #333333;
+    --gradient-1: linear-gradient(135deg, #415572, #141619);
+    --gradient-2: linear-gradient(135deg, #333333, #141619);
+    --gradient-3: linear-gradient(135deg, #999999, #415572);
+    --gradient-4: linear-gradient(135deg, #E5E5E5, #999999);
+    --gradient-hover: linear-gradient(135deg, #665DCD 0%, #5FA4E6 45%, #D2AB67 100%);
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-primary);
+    background-color: var(--light-gray);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--black);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.wrapeer-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 70px;
+    height: auto;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--white);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.btn-login {
+    background: var(--gradient-1);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+nav ul li a:hover {
+    background: var(--gradient-hover);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Efeito de underline acompanhando o gradiente */
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: var(--gradient-hover);
+}
