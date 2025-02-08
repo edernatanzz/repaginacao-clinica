@@ -41,3 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 600);
     });
 });
+
+
+$(document).ready(function () {
+    $(".toggle-menu").click(function () {
+        $("nav").slideToggle();
+    });
+});
+
