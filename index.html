@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="assets/darkmode.css">
+    <link rel="stylesheet" href="assets/darkMode.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="assets/index.js"></script>
     <title>Clínica de Reabilitação | Grupo Águias da Vida</title>
 </head>
@@ -59,6 +61,62 @@
             <img src="assets/imgs/slider/7.png" alt="Imagem 3">
         </div>
     </section>
+    <main>
+        <section class="services-section">
+            <h2 data-aos="fade-up" >Nossos Serviços de Reabilitação</h2>
+            <div class="services-container">
+                <!-- Serviço 1-->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/imgs/services/terapia-individual.png" alt="Terapia Individual">
+                    <h3>Terapia Individual</h3>
+                    <p>Sessões personalizadas para ajudar na recuperação emocional e física.</p>
+                    <a href="#" class="learn-more">Saiba Mais</a>
+                </div>
+        
+                <!-- Serviço 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/imgs/services/aconcelhamento-grupo.jpg" alt="Aconselhamento em Grupo">
+                    <h3>Aconselhamento em Grupo</h3>
+                    <p>Grupos de apoio para compartilhar experiências e superar desafios juntos.</p>
+                    <a href="#" class="learn-more">Saiba Mais</a>
+                </div>
+        
+                <!-- Serviço 3-->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/imgs/services/empathy-7819820_1280.jpg" alt="Tratamento para Dependência Química">
+                    <h3>Tratamento para Dependência Química</h3>
+                    <p>Programas especializados para superar a dependência de substâncias.</p>
+                    <a href="#" class="learn-more">Saiba Mais</a>
+                </div>
+        
+                <!-- Serviço 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/imgs/services/sad-7778857_1280.jpg" alt="Reabilitação Física">
+                    <h3>Reabilitação Física</h3>
+                    <p>Tratamentos para recuperação de lesões e melhoria da mobilidade.</p>
+                    <a href="#" class="learn-more">Saiba Mais</a>
+                </div>
+        
+                <!-- Serviço 5-->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/imgs/services/mood-7529900_640.png" alt="Acompanhamento Psicológico">
+                    <h3>Acompanhamento Psicológico</h3>
+                    <p>Suporte psicológico contínuo para pacientes e familiares.</p>
+                    <a href="#" class="learn-more">Saiba Mais</a>
+                </div>
+        
+                <!-- Serviço 6 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/imgs/services/mood-7529905_640.png" alt="Atividades de Integração Social">
+                    <h3>Atividades de Integração Social</h3>
+                    <p>Programas para reintegração social e profissional.</p>
+                    <a href="#" class="learn-more">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
     
 
     <script>
@@ -73,6 +131,11 @@
                 fade: true,
                 cssEase: 'linear'
             });
+        });
+
+        AOS.init({
+            duration: 800,
+            once: true,
         });
     </script>
 </body>
