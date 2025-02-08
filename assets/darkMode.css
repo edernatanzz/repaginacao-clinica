@@ -231,3 +231,63 @@ body.light-mode .star {
 body.light-mode .read-more {
 color: var(--dark-blue);
 }
+body.light-mode .planos-section {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+body.light-mode .planos-section h2 {
+    color: var(--dark-blue);
+}
+
+body.light-mode .plano-card {
+    background-color: var(--light-gray);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .plano-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .plano-titulo {
+    color: var(--dark-blue);
+}
+
+body.light-mode .plano-beneficios li {
+    color: var(--dark-gray);
+}
+
+body.light-mode .plano-botao {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+body.light-mode .plano-botao:hover {
+    background-color: var(--medium-gray);
+}
+
+/* Planos*/
+
+body.light-mode .planos-section h2 {
+    color: var(--texto-escuro);
+}
+
+body.light-mode .plano-card {
+    background: var(--fundo-claro);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .plano-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .plano-beneficios li {
+    border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    .plano-card:hover {
+        transform: none;
+        box-shadow: var(--sombra);
+    }
+}
