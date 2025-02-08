@@ -57,3 +57,20 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function(){
+    let currentReview = 0;
+    const reviews = $(".testimonial-card");
+    const totalReviews = reviews.length;
+
+    function showReview(index) {
+        reviews.removeClass("active");
+        reviews.eq(index).addClass("active");
+    }
+
+    $(".navigation .arrow").click(function(){
+        currentReview = (currentReview + 1) % totalReviews;
+        showReview(currentReview);
+    });
+
+    showReview(currentReview);
+});
