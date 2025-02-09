@@ -402,3 +402,52 @@ body.light-mode .clinics-header p,
 body.light-mode .clinics-header span {
     color: var(--black);
 }
+
+
+body.light-mode .footer {
+    background: #f9f9f9;
+    color: #000;
+}
+
+body.light-mode .footer-column h3 {
+    color: #444;
+}
+
+body.light-mode .footer-column ul li a {
+    color: #666;
+}
+
+body.light-mode .footer-column ul li a:hover {
+    color: #007bff;
+}
+
+body.light-mode .footer-form {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .footer-form form input,
+body.light-mode .footer-form form textarea {
+    background: #f1f1f1;
+    color: black;
+}
+
+body.light-mode .footer-form form button {
+    background: #007bff;
+}
+
+body.light-mode .footer-form form button:hover {
+    background: #0056b3;
+}
+
+body.light-mode .footer-bottom p {
+    color: #444;
+}
+
+body.light-mode .footer-social a {
+    color: #444;
+}
+
+body.light-mode .footer-social a:hover {
+    color: #007bff;
+}
