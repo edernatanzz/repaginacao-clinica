@@ -341,3 +341,64 @@ body.light-mode .next-btn:hover {
         bottom: -30px;
     }
 }
+/* 🌞 Light Mode - Clínicas */
+body.light-mode .clinics-section {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+body.light-mode .clinic-card {
+    background: var(--light-gray);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--medium-gray);
+}
+
+body.light-mode .clinic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .clinic-info h3 {
+    color: var(--dark-blue);
+}
+
+body.light-mode .clinic-info p {
+    color: var(--black);
+}
+
+body.light-mode .clinic-type {
+    color: var(--dark-blue);
+}
+
+body.light-mode .clinic-level {
+    color: #ffa500;
+}
+
+body.light-mode .view-btn {
+    background: var(--dark-blue);
+}
+
+body.light-mode .view-btn:hover {
+    background: var(--medium-gray);
+}
+
+body.light-mode .clinics-container {
+    scrollbar-color: #0066cc #f1f1f1;
+}
+
+body.light-mode .clinics-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body.light-mode .clinics-container::-webkit-scrollbar-thumb {
+    background: #0066cc;
+}
+
+body.light-mode .clinics-container::-webkit-scrollbar-thumb:hover {
+    background: #004da3;
+}
+body.light-mode .clinics-header h2,
+body.light-mode .clinics-header p,
+body.light-mode .clinics-header span {
+    color: var(--black);
+}

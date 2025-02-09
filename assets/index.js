@@ -101,3 +101,66 @@ $(document).ready(function(){
 
     showPosts(currentIndex);
 });
+
+
+$(document).ready(function () {
+    let currentIndex = 0;
+    const clinicContainer = $(".clinics-container");
+    const totalClinics = $(".clinic-card").length;
+    let clinicsPerView = $(window).width() <= 768 ? 1 : 3;
+
+    function showClinics() {
+        clinicContainer.css("transform", `translateX(${-currentIndex * (100 / clinicsPerView)}%)`);
+    }
+
+    $(".next-clinic-btn").click(function () {
+        if (currentIndex + clinicsPerView < totalClinics) {
+            currentIndex++;
+        }
+        showClinics();
+    });
+
+    $(".prev-clinic-btn").click(function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+        }
+        showClinics();
+    });
+
+    function adjustClinicsPerView() {
+        clinicsPerView = $(window).width() <= 768 ? 1 : 3;
+        showClinics();
+    }
+
+    $(window).resize(adjustClinicsPerView);
+    adjustClinicsPerView();
+});
+
+
+$(document).ready(function () {
+    const clinicsContainer = $(".clinics-container");
+    const scrollAmount = 300; 
+
+    $(".next-clinic-btn").click(function () {
+        clinicsContainer.animate({ scrollLeft: "+=" + scrollAmount }, 500);
+    });
+
+    $(".prev-clinic-btn").click(function () {
+        clinicsContainer.animate({ scrollLeft: "-=" + scrollAmount }, 500);
+    });
+
+    
+    clinicsContainer.on("mousedown touchstart", function (e) {
+        let startX = e.pageX || e.originalEvent.touches[0].pageX;
+        let scrollLeft = clinicsContainer.scrollLeft();
+        
+        $(this).on("mousemove touchmove", function (e) {
+            let x = e.pageX || e.originalEvent.touches[0].pageX;
+            clinicsContainer.scrollLeft(scrollLeft - (x - startX));
+        });
+
+        $(this).on("mouseup touchend", function () {
+            $(this).off("mousemove touchmove");
+        });
+    });
+});
