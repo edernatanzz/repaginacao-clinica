@@ -291,3 +291,53 @@ body.light-mode .plano-beneficios li {
         box-shadow: var(--sombra);
     }
 }
+body.light-mode .prev-btn,
+body.light-mode .next-btn {
+    background: var(--white);
+    color: var(--black);
+}
+
+body.light-mode .prev-btn:hover,
+body.light-mode .next-btn:hover {
+    background: var(--light-gray);
+}
+
+/* 📱 RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .blog-slider {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .blog-post {
+        flex: 0 0 45%;
+        scroll-snap-align: center;
+        width: auto;
+    }
+
+    .prev-btn, .next-btn {
+        display: flex;
+        font-size: 18px;
+        padding: 10px;
+        position: absolute;
+        top: auto;
+        bottom: -40px;
+        transform: none;
+    }
+
+    .prev-btn { left: 25%; }
+    .next-btn { right: 25%; }
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        flex: 0 0 90%;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 16px;
+        bottom: -30px;
+    }
+}
