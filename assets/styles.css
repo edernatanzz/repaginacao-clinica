@@ -272,7 +272,7 @@ nav ul li a:hover::after {
     }
 
     nav {
-        background: url('imgs/middle-left-2.png.png') no-repeat left center;
+        background: url('imgs/middle-left-2.png.png') no-repeat ;
         display: none;
         position: absolute;
         top: 30px;
