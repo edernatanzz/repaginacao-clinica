@@ -1235,6 +1235,9 @@ body.light-mode {
     padding: 60px 20px;
     text-align: center;
     font-family: 'Inter', sans-serif;
+    height: auto;
+    overflow: hidden;
+    position: relative;
 }
 
 .footer-container {
