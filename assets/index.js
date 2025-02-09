@@ -58,16 +58,34 @@ $(document).ready(function () {
 });
 
 $(document).ready(function(){
+    let currentReview = 0;
+    const reviews = $(".testimonial-card");
+    const totalReviews = reviews.length;
+
+    function showReview(index) {
+        reviews.removeClass("active");
+        reviews.eq(index).addClass("active");
+    }
+
+    $(".navigation .arrow").click(function(){
+        currentReview = (currentReview + 1) % totalReviews;
+        showReview(currentReview);
+    });
+
+    showReview(currentReview);
+});
+
+$(document).ready(function(){
     let currentIndex = 0;
     const posts = $(".blog-post");
     const totalPosts = posts.length;
     const postsToShow = 4;
 
     function showPosts(startIndex) {
-        posts.hide(); // Esconde todos os posts
+        posts.hide(); 
         for (let i = 0; i < postsToShow; i++) {
-            const index = (startIndex + i) % totalPosts; // Calcula o índice do post
-            posts.eq(index).fadeIn(); // Exibe o post
+            const index = (startIndex + i) % totalPosts; 
+            posts.eq(index).fadeIn(); 
         }
     }
 
@@ -81,6 +99,5 @@ $(document).ready(function(){
         showPosts(currentIndex);
     });
 
-    // Exibir os primeiros posts no início
     showPosts(currentIndex);
 });
