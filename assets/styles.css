@@ -1165,10 +1165,11 @@ body.light-mode {
 }
 /* 🌑 Footer - Dark Mode */
 .footer {
-    background: #000;
+    background: #111;
     color: #fff;
     padding: 60px 20px;
     text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
@@ -1181,9 +1182,10 @@ body.light-mode {
     gap: 40px;
 }
 
-/* 🏥 Logo */
+/* 🏥 Logo do Footer */
 .footer-logo img {
     max-width: 120px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* 🔗 Links */
@@ -1200,7 +1202,7 @@ body.light-mode {
 
 .footer-column h3 {
     font-size: 16px;
-    color: #ccc;
+    color: #ddd;
     margin-bottom: 10px;
 }
 
@@ -1214,7 +1216,7 @@ body.light-mode {
 }
 
 .footer-column ul li a {
-    color: #999;
+    color: #bbb;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease-in-out;
@@ -1226,11 +1228,12 @@ body.light-mode {
 
 /* 📞 Formulário de Contato */
 .footer-form {
-    background: #ffffff0d;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
     border-radius: 8px;
-    max-width: 300px;
+    max-width: 350px; /* 🔹 Aumentado */
     text-align: left;
+    width: 100%;
 }
 
 .footer-form h3 {
@@ -1239,20 +1242,28 @@ body.light-mode {
     margin-bottom: 10px;
 }
 
+/* 🔹 AUMENTANDO a caixa de mensagem */
 .footer-form form input,
 .footer-form form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
     border-radius: 6px;
     border: none;
     background: #222;
     color: white;
+    font-size: 14px;
+}
+
+/* 🔹 Ajuste especial para a área de mensagem */
+.footer-form form textarea {
+    height: 100px; /* Maior espaço */
+    resize: none;
 }
 
 .footer-form form button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: #4dd0e1;
     color: white;
     border: none;
@@ -1299,12 +1310,12 @@ body.light-mode {
     transform: scale(1.1);
 }
 
-
+/* 📱 MOBILE - Centralizando o Formulário */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        gap: 30px;
     }
 
     .footer-links {
@@ -1318,12 +1329,93 @@ body.light-mode {
     }
 
     .footer-form {
-        width: 100%;
+        max-width: 100%;
     }
 
     .footer-bottom {
         flex-direction: column;
-        text-align: center;
         gap: 10px;
+        text-align: center;
     }
+}
+
+/* 🌞 Light Mode */
+body.light-mode .footer {
+    background: #f9f9f9;
+    color: #000;
+}
+
+body.light-mode .footer-logo img {
+    content: url("assets/imgs/light.png"); /* Usa a mesma imagem do Header */
+}
+
+body.light-mode .footer-column h3 {
+    color: #444;
+}
+
+body.light-mode .footer-column ul li a {
+    color: #666;
+}
+
+body.light-mode .footer-column ul li a:hover {
+    color: #007bff;
+}
+
+body.light-mode .footer-form {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .footer-form form input,
+body.light-mode .footer-form form textarea {
+    background: #f1f1f1;
+    color: black;
+}
+
+body.light-mode .footer-form form button {
+    background: #007bff;
+}
+
+body.light-mode .footer-form form button:hover {
+    background: #0056b3;
+}
+
+body.light-mode .footer-bottom p {
+    color: #444;
+}
+
+body.light-mode .footer-social a {
+    color: #444;
+}
+
+body.light-mode .footer-social a:hover {
+    color: #007bff;
+}
+
+/* 🏥 Estilo da Logo no Footer */
+.footer-logo h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-logo .highlight {
+    background: linear-gradient(90deg, #4dd0e1, #00bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* 🌞 Light Mode - Alteração da cor */
+body.light-mode .footer-logo h2 {
+    color: #111; /* Preto no Light Mode */
+}
+
+body.light-mode .footer-logo .highlight {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

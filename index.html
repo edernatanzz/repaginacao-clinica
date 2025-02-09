@@ -34,10 +34,10 @@
             <nav class="nav-link">
                 <ul>
                     <li><a href="#">INÍCIO</a></li>
-                    <li><a href="#">SOBRE NÓS</a></li>
-                    <li><a href="#">CLÍNICAS</a></li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#">AJUDA</a></li>
+                    <li><a href="#servicos">SOBRE NÓS</a></li>
+                    <li><a href="#clinicas">CLÍNICAS</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="#footer">AJUDA</a></li>
                 </ul>
 
                 <div class="toggle-container">
@@ -53,17 +53,17 @@
     </header>
     <section class="section-container">
         <div class="slider">
-            <img src="assets/imgs/Clínicas de Reabilitação _ Grupo Águias da Vida_files/" alt="Imagem 2">
-            <img src="assets/imgs/slider/2.png" alt="Imagem 3">
-            <img src="assets/imgs/slider/3.png" alt="Imagem 3">
-            <img src="assets/imgs/slider/4.png" alt="Imagem 3">
-            <img src="assets/imgs/slider/5.png" alt="Imagem 3">
-            <img src="assets/imgs/slider/6.png" alt="Imagem 3">
-            <img src="assets/imgs/slider/7.png" alt="Imagem 3">
+            <img src="assets/imgs/slider2/1.png" alt="Imagem 2">
+            <img src="assets/imgs/slider2/2.png" alt="Imagem 3">
+            <img src="assets/imgs/slider2/3.png" alt="Imagem 3">
+            <img src="assets/imgs/slider2/4.png" alt="Imagem 3">
+            <img src="assets/imgs/slider2/5.png" alt="Imagem 3">
+            <img src="assets/imgs/slider2/6.png" alt="Imagem 3">
+            <img src="assets/imgs/slider2/7.png" alt="Imagem 3">
         </div>
     </section>
     <main>
-        <section class="services-section">
+        <section id="servicos" class="services-section">
             <h2 data-aos="fade-up" >Nossos Serviços de Reabilitação</h2>
             <div class="services-container">
                 <!-- Serviço 1-->
@@ -299,7 +299,7 @@
                 <p>Dependência Química, Alcoolismo, Transtornos Mentais</p>
             </div>
         
-            <div class="blog-slider">
+            <div id="blog" class="blog-slider">
                 <button class="prev-btn">&#8592;</button>
                 <div class="blog-post">
                     <img src="assets/imgs/blog/clinica-de-reabilitacao-em-sp.png" alt="Guia Completo Clínica de Reabilitação">
@@ -347,7 +347,7 @@
             </div>
         </section>
         
-        <section class="clinics-section">
+        <section id="clinicas" class="clinics-section">
             <div class="clinics-header">
                 <h2>Clínicas de Reabilitação | Grupo Águias da Vida</h2>
                 <p>Dependência Química, Alcoolismo, Transtornos Mentais</p>
@@ -425,12 +425,10 @@
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-logo">
-                    <img id="footer-logo" src="assets/imgs/dark-footer.png" alt="Grupo Águias da Vida">
+                    <h2><span class="highlight">Águias</span> <hr> da Vida</h2>
                 </div>
-        
-        
-        
-                <div class="footer-links">
+         
+                <div id="footer" class="footer-links">
                     <div class="footer-column">
                         <h3>Institucional</h3>
                         <ul>
@@ -507,9 +505,18 @@
             });
         });
 
-        AOS.init({
-            duration: 800,
-            once: true,
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll("body *").forEach((element, index) => {
+                if (element.offsetHeight > 0 && element.offsetWidth > 0) {
+                    element.setAttribute("data-aos", "fade-up");
+                    element.setAttribute("data-aos-delay", (index % 10) * 100); // Delay incremental
+                }
+            });
+    
+            AOS.init({
+                duration: 800,
+                once: true,
+            });
         });
     </script>
 </body>
