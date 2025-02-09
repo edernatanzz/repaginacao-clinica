@@ -451,3 +451,23 @@ body.light-mode .footer-social a {
 body.light-mode .footer-social a:hover {
     color: #007bff;
 }
+
+
+/* 🌞 Light Mode - Alteração da cor */
+body.light-mode .footer-logo h2 {
+    color: #111; /* Preto no Light Mode */
+}
+
+body.light-mode .footer-logo .highlight {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .whatsapp-float {
+    background-color: #128C7E;
+}
